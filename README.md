@@ -10,10 +10,3 @@ Converter from markdown notation to unicode characters
 | `***both***`  | 𝙗𝙤𝙩𝙝          |
 | `` `mono` ``  | 𝚖𝚘𝚗𝚘          |
 
-## Blockquotes
-
-`> Some say`
-
-▐
-▐ Some say
-▐
