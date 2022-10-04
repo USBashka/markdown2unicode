@@ -1,4 +1,4 @@
-import sys
+import sys, os
 
 from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtUiTools import QUiLoader
@@ -12,6 +12,16 @@ example = """**bold**
 ***both***
 `monospace`"""
 
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 def main():
 
@@ -64,8 +74,8 @@ def main():
 
     loader = QUiLoader()
     app = QtWidgets.QApplication(sys.argv)
-    window = loader.load("ui.ui", None)
-    window.setWindowIcon(QtGui.QIcon('icon.bmp'))
+    window = loader.load(resource_path("ui.ui"), None)
+    window.setWindowIcon(QtGui.QIcon(resource_path("icon.bmp")))
     window.input_text.textChanged.connect(on_input_text_edited)
     window.help.clicked.connect(on_help_pressed)
     window.convert.clicked.connect(on_convert_pressed)
