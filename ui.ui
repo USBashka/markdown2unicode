@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>544</width>
+    <width>708</width>
     <height>507</height>
    </rect>
   </property>
@@ -14,9 +14,126 @@
    <string>markdown2unicode</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <widget class="QToolButton" name="bold">
+            <property name="minimumSize">
+             <size>
+              <width>37</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Bold (Ctrl+B)</string>
+            </property>
+            <property name="text">
+             <string>B</string>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+B</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="italic">
+            <property name="minimumSize">
+             <size>
+              <width>37</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <italic>true</italic>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Italic (Ctrl+I)</string>
+            </property>
+            <property name="text">
+             <string>I</string>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+I</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="mono">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Consolas</family>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Mono (Ctrl+E)</string>
+            </property>
+            <property name="text">
+             <string>{M}</string>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+E</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="clear">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Clear all (Ctrl+D)</string>
+          </property>
+          <property name="text">
+           <string>🧹 Clear</string>
+          </property>
+          <property name="shortcut">
+           <string>Ctrl+D</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QPlainTextEdit" name="input_text">
         <property name="font">
@@ -35,20 +152,27 @@
         </property>
        </widget>
       </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QPushButton" name="help">
-          <property name="text">
-           <string>🌐 Markdown help (F1)</string>
-          </property>
-          <property name="shortcut">
-           <string>F1</string>
-          </property>
-         </widget>
-        </item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QPushButton" name="convert">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>23</height>
+           </size>
+          </property>
           <property name="text">
            <string>Convert (F5) ➡️</string>
           </property>
@@ -57,7 +181,30 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QPushButton" name="help">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ℹ️ Show example (F1)</string>
+          </property>
+          <property name="shortcut">
+           <string>F1</string>
+          </property>
+         </widget>
+        </item>
        </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPlainTextEdit" name="result">
@@ -78,7 +225,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>544</width>
+     <width>708</width>
      <height>21</height>
     </rect>
    </property>
