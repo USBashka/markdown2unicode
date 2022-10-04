@@ -1,7 +1,6 @@
 # Markdown to Unicode converter
 
 
-
 class Mode:
     REGULAR = 0
     BOLD = 1
@@ -74,9 +73,6 @@ def convert(md_text: str):
                         result += Remaps.mono[chr_index]
     
     return result
-                
-
-
 
 
 def main():
@@ -85,6 +81,7 @@ def main():
     f.write(convert(input()))
     f.close()
     print("Converted text saved to \"output_text.txt\"")
+
 
 if __name__ == "__main__":
     main()

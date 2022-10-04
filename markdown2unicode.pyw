@@ -7,10 +7,12 @@ import pyperclip
 from converter import convert
 
 
+
 example = """**bold**
 *italic*
 ***both***
 `monospace`"""
+
 
 
 def resource_path(relative_path):
@@ -20,8 +22,8 @@ def resource_path(relative_path):
         base_path = sys._MEIPASS
     except Exception:
         base_path = os.path.abspath(".")
-
     return os.path.join(base_path, relative_path)
+
 
 def main():
 
